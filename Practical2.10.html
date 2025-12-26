@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Div and Span Layout with CSS</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            Div and Span Layout Example
+        </div>
+
+        <div class="content">
+            <p>
+                This paragraph is inside a <code>div</code> with class "content". Inside this text,
+                <span class="highlight">this highlighted part</span> is wrapped in a <code>span</code> to style inline.
+            </p>
+            <p>
+                Div elements are block-level containers used for grouping content sections, while span elements are inline containers for small portions of text inside other elements.
+            </p>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Divyansh Sahariya
+        </div>
+
+    </div>
+
+</body>
+
+</html>

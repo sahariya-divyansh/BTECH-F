@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Q14 - Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #333;
+        }
+        
+        form {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        
+        button {
+            padding: 8px 12px;
+            margin-top: 8px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>registration form </h2>
+
+    <form onsubmit="return validateForm()">
+        <label for="username">Name:</label><br>
+        <input type="text" id="username" placeholder="Enter Name" oninput="checkInput()"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="Enter Email" oninput="checkInput()"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Form submission validation
+        function validateForm() {
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+
+            if (name === "") {
+                alert("Name cannot be empty");
+                return false; // prevent form submission
+            }
+
+            if (email === "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true; // allow submission
+        }
+
+        // oninput event for live feedback / console
+        function checkInput() {
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+
+            console.log("Current Name:", name);
+            console.log("Current Email:", email);
+        }
+    </script>
+
+</body>
+
+</html>

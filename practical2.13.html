@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Function & Scope Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+        }
+        
+        .card {
+            width: 350px;
+            margin: 100px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        button {
+            padding: 8px 20px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        p {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Function & Scope Demo</h2>
+        <button onclick="showScope()">Show Values</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        /* User-defined function */
+        function showScope() {
+
+            // var - function scope
+            var a = 10;
+
+            // let - block scope
+            let b = 20;
+
+            // const - block scope (constant value)
+            const c = 30;
+
+            document.getElementById("output").innerHTML =
+                "var a = " + a + "<br>" +
+                "let b = " + b + "<br>" +
+                "const c = " + c;
+        }
+    </script>
+
+</body>
+
+</html>

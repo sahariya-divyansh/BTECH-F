@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pattern using Loop</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+        }
+        
+        .card {
+            width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        button {
+            padding: 8px 20px;
+            margin: 10px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        pre {
+            background: #eef2ff;
+            padding: 10px;
+            text-align: left;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Loop Pattern Demo</h2>
+
+        <button onclick="triangle()">For Loop Triangle</button>
+        <button onclick="diamond()">While Loop Diamond</button>
+
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        /* FOR LOOP – TRIANGLE */
+        function triangle() {
+            let text = "";
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= i; j++) {
+                    text += j;
+                }
+                text += "\n";
+            }
+            document.getElementById("output").textContent = text;
+        }
+
+        /* WHILE LOOP – DIAMOND */
+        function diamond() {
+            let text = "";
+            let i = 1;
+
+            /* upper part */
+            while (i <= 5) {
+                let j = 1;
+                while (j <= i) {
+                    text += j;
+                    j++;
+                }
+                text += "\n";
+                i++;
+            }
+
+            /* lower part */
+            i = 4;
+            while (i >= 1) {
+                let j = 1;
+                while (j <= i) {
+                    text += j;
+                    j++;
+                }
+                text += "\n";
+                i--;
+            }
+
+            document.getElementById("output").textContent = text;
+        }
+    </script>
+
+</body>
+
+</html>

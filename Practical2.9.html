@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Mobile-First Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1rem;
+            padding: 0;
+            font-size: 1rem;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header,
+        main,
+        footer {
+            max-width: 40rem;
+            margin: 0 auto 1.5rem auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        main p {
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+        
+        @media (min-width: 48rem) {
+            body {
+                font-size: 1.125rem;
+            }
+            header,
+            main,
+            footer {
+                max-width: 60rem;
+                padding: 2rem;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            main {
+                display: flex;
+                gap: 2rem;
+            }
+            main p {
+                flex: 2;
+                font-size: 1.125rem;
+            }
+            aside {
+                flex: 1;
+                background-color: #efefef;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+        
+        aside {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Mobile-First Design</h1>
+    </header>
+
+    <main>
+        <p>
+            This is a sample responsive webpage demonstrating mobile-first design using flexible units like rem and media queries. Resize the browser window to see the layout adapt.
+        </p>
+        <aside>
+            <h2>Sidebar Content</h2>
+            <p>This sidebar appears only on screens wider than 768px.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2025 Responsive Design Example</p>
+    </footer>
+
+</body>
+
+</html>
